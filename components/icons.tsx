@@ -2,6 +2,29 @@ import * as React from "react";
 
 import { IconSvgProps } from "@/types";
 
+
+export const LifeBoard: React.FC<IconSvgProps> = ({
+  size = 36,
+  width,
+  height,
+  ...props
+}) => {
+  const w = size || width;
+  const h = size || height;
+
+  // Change the src to the actual image path you want to use (png, svg, etc.)
+  return (
+    <img
+      src="/lifeboard.jpeg"
+      width={w}
+      height={h}
+      alt="LifeBoard"
+      style={{ display: "block" }}
+      {...(props as any)}
+    />
+  );
+};
+
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
   width,
@@ -132,6 +155,8 @@ export const SunFilledIcon = ({
     </g>
   </svg>
 );
+
+
 
 export const HeartFilledIcon = ({
   size = 24,

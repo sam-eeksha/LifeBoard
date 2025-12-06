@@ -24,6 +24,7 @@ import {
   HeartFilledIcon,
   SearchIcon,
   Logo,
+  LifeBoard,
 } from "@/components/icons";
 
 export const Navbar = () => {
@@ -49,12 +50,12 @@ export const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="xl" position="sticky" className="bg-black-200">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+          <NextLink className="flex justify-start  gap-1" href="/">
+            <LifeBoard />
+            
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">

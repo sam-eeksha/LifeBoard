@@ -1,4 +1,5 @@
-import "@/styles/globals.css";
+// @ts-ignore TS(7016): Cannot find module or type declarations for side-effect import of '../styles/globals.css'.
+import "../styles/globals.css";
 import { Metadata, Viewport } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
@@ -9,8 +10,6 @@ import { siteConfig } from "@/config/site";
 import { fontSans, fontDancing } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
-
-
 
 export const metadata: Metadata = {
   title: {
@@ -41,13 +40,14 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen text-foreground bg-background font-sans antialiased",
-          fontSans.variable, fontDancing.variable
+          fontSans.variable,
+          fontDancing.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <Sidebar/>
+            <Sidebar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
